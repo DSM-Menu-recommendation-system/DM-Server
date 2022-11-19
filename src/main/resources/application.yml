@@ -1,1 +1,19 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      generate-ddl: false
+      hibernate:
+        format_sql: true
+    defer-datasource-initialization: true
+    show-sql: true
+  jackson:
+    property-naming-strategy: SNAKE_CASE
 
