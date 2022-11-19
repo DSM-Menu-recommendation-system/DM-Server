@@ -16,4 +16,3 @@ spring:
     show-sql: true
   jackson:
     property-naming-strategy: SNAKE_CASE
-
