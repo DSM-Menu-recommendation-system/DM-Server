@@ -1,4 +1,4 @@
-package com.project.dm.domain.menu.type;
+package com.project.dm.domain.menu.domain.type;
 
 public enum MoodType {
     HAPPY,

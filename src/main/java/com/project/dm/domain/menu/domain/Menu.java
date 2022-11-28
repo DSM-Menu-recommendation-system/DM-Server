@@ -1,8 +1,8 @@
-package com.project.dm.domain.menu;
+package com.project.dm.domain.menu.domain;
 
-import com.project.dm.domain.menu.type.FoodType;
-import com.project.dm.domain.menu.type.MoodType;
-import com.project.dm.domain.menu.type.WeatherType;
+import com.project.dm.domain.menu.domain.type.FoodType;
+import com.project.dm.domain.menu.domain.type.MoodType;
+import com.project.dm.domain.menu.domain.type.WeatherType;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
