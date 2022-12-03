@@ -19,4 +19,9 @@ public class MenuController {
         return recommendMenuService.recommendMenu(request);
     }
 
+    @GetMapping("/mood")
+    public RecommendMenuResponse recommendMenu(@RequestBody RecommendMoodMenuRequest request) {
+        return recommendMenuService.recommendMenu(request);
+    }
+
 }
