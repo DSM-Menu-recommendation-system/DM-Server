@@ -1,5 +1,6 @@
 package com.project.dm.domain.menu.presentation;
 
+import com.project.dm.domain.menu.presentation.dto.request.RecommendMoodMenuRequest;
 import com.project.dm.domain.menu.presentation.dto.request.RecommendWeatherMenuRequest;
 import com.project.dm.domain.menu.presentation.dto.response.RecommendMenuResponse;
 import com.project.dm.domain.menu.service.RecommendMenuServiceImpl;
@@ -13,7 +14,7 @@ public class MenuController {
 
     private final RecommendMenuServiceImpl recommendMenuService;
 
-    @GetMapping("/choose")
+    @GetMapping("/weather")
     public RecommendMenuResponse recommendMenu(@RequestBody RecommendWeatherMenuRequest request) {
         return recommendMenuService.recommendMenu(request);
     }
