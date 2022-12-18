@@ -29,9 +29,6 @@ public class Menu {
     @Column(length = 10, nullable = false)
     private WeatherType weatherType;
 
-    @Column(nullable = false)
-    private String menuLink;
-
     @Builder
     public Menu(String food, MoodType moodType, WeatherType weatherType) {
         this.food = food;
