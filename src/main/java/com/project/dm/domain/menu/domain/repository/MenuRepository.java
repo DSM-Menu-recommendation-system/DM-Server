@@ -7,10 +7,12 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.util.Optional;
 
-public interface MenuRepository extends CrudRepository<Menu, Long> {
+public interface MenuRepository extends CrudRepository<Menu, Integer> {
 
-    Optional<Menu> findByWeatherType(WeatherType weatherType);
+    Optional<Menu> findById(Integer menuId);
 
-    Optional<Menu> findByMoodType(MoodType moodType);
+    Long countAllByWeatherType(WeatherType weatherType);
+
+    Long countAllByMoodType(MoodType moodType);
 
 }
