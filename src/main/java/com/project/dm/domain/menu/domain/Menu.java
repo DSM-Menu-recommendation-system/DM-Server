@@ -16,7 +16,7 @@ public class Menu {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @Column(length = 15, nullable = false)
     private String food;
@@ -28,6 +28,9 @@ public class Menu {
     @Enumerated(EnumType.STRING)
     @Column(length = 10, nullable = false)
     private WeatherType weatherType;
+
+    @Column(nullable = false)
+    private String menuLink;
 
     @Builder
     public Menu(String food, MoodType moodType, WeatherType weatherType) {
