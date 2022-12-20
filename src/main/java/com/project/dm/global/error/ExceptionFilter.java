@@ -24,9 +24,10 @@ public class ExceptionFilter extends OncePerRequestFilter {
         try {
             filterChain.doFilter(request, response);
         } catch (BusinessException e) {
+            e.printStackTrace();
             sendErrorMessage(response, e.getErrorCode());
         } catch (Exception e) {
-            log.error(e.getMessage());
+            e.printStackTrace();
             sendErrorMessage(response, ErrorCode.INTERNAL_SERVER_ERROR);
         }
     }
