@@ -22,12 +22,15 @@ public class Menu {
     private String food;
 
     @Enumerated(EnumType.STRING)
-    @Column(length = 10, nullable = false)
+    @Column(length = 10)
     private MoodType moodType;
 
     @Enumerated(EnumType.STRING)
-    @Column(length = 10, nullable = false)
+    @Column(length = 10)
     private WeatherType weatherType;
+
+    @Column(nullable = false)
+    private String menuImageUrl;
 
     @Builder
     public Menu(String food, MoodType moodType, WeatherType weatherType) {
