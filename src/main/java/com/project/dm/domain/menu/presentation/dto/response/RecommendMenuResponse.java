@@ -9,4 +9,6 @@ public class RecommendMenuResponse {
 
     private final String menu;
 
+    private final String menu_image_url;
+
 }
