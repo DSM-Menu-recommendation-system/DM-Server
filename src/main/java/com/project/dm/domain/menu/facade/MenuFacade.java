@@ -12,8 +12,13 @@ public class MenuFacade {
 
     private final MenuRepository menuRepository;
 
-    public Menu getMenuById(Integer menuId) {
-        return menuRepository.findById(menuId)
+    public Menu getMenuByMoodNum(Integer menuId) {
+        return menuRepository.findByCheckMoodNum(menuId)
+                .orElseThrow(() -> MenuNotFoundException.EXCEPTION);
+    }
+
+    public Menu getMenuByWeatherNum(Integer menuId) {
+        return menuRepository.findByCheckWeatherNum(menuId)
                 .orElseThrow(() -> MenuNotFoundException.EXCEPTION);
     }
 
