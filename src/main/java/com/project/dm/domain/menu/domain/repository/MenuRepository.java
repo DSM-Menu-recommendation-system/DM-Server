@@ -11,6 +11,10 @@ public interface MenuRepository extends CrudRepository<Menu, Integer> {
 
     Optional<Menu> findById(Integer menuId);
 
+    Optional<Menu> findByCheckWeatherNum(Integer menuId);
+
+    Optional<Menu> findByCheckMoodNum(Integer menuId);
+
     Long countAllByWeatherType(WeatherType weatherType);
 
     Long countAllByMoodType(MoodType moodType);
