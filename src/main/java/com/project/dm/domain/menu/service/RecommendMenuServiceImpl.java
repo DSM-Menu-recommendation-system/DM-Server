@@ -18,9 +18,9 @@ import java.util.Random;
 @Service
 public class RecommendMenuServiceImpl implements MenuService {
 
-    Random random = new Random();
     private final MenuFacade menuFacade;
     private final MenuRepository menuRepository;
+    Random random = new Random();
 
     @Override
     @Transactional(readOnly = true)
@@ -48,10 +48,6 @@ public class RecommendMenuServiceImpl implements MenuService {
         Menu menu = menuFacade.getMenuByMoodNum(menuId);
 
         return new RecommendMenuResponse(menu.getFood(), menu.getMenuImageUrl());
-    }
-
-    private int random(Long count) {
-        return (int)(random.nextLong(count) + 1);
     }
 
 }
