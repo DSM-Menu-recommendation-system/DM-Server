@@ -1,13 +1,13 @@
-package com.project.dm.domain.menu.service;
+package com.project.dm.service;
 
-import com.project.dm.domain.menu.domain.Menu;
-import com.project.dm.domain.menu.domain.repository.MenuRepository;
-import com.project.dm.domain.menu.domain.type.MoodType;
-import com.project.dm.domain.menu.domain.type.WeatherType;
-import com.project.dm.domain.menu.facade.MenuFacade;
-import com.project.dm.domain.menu.presentation.dto.request.RecommendMoodMenuRequest;
-import com.project.dm.domain.menu.presentation.dto.request.RecommendWeatherMenuRequest;
-import com.project.dm.domain.menu.presentation.dto.response.RecommendMenuResponse;
+import com.project.dm.entity.Menu;
+import com.project.dm.entity.repository.MenuRepository;
+import com.project.dm.entity.type.MoodType;
+import com.project.dm.entity.type.WeatherType;
+import com.project.dm.facade.MenuFacade;
+import com.project.dm.dto.request.RecommendMoodMenuRequest;
+import com.project.dm.dto.request.RecommendWeatherMenuRequest;
+import com.project.dm.dto.response.RecommendMenuResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
