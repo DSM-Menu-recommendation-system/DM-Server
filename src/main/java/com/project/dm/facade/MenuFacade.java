@@ -1,8 +1,8 @@
-package com.project.dm.domain.menu.facade;
+package com.project.dm.facade;
 
-import com.project.dm.domain.menu.domain.Menu;
-import com.project.dm.domain.menu.domain.repository.MenuRepository;
-import com.project.dm.domain.menu.exception.MenuNotFoundException;
+import com.project.dm.entity.Menu;
+import com.project.dm.entity.repository.MenuRepository;
+import com.project.dm.exception.MenuNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

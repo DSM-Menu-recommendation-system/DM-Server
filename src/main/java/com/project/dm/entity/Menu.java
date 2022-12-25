@@ -1,7 +1,7 @@
-package com.project.dm.domain.menu.domain;
+package com.project.dm.entity;
 
-import com.project.dm.domain.menu.domain.type.MoodType;
-import com.project.dm.domain.menu.domain.type.WeatherType;
+import com.project.dm.entity.type.MoodType;
+import com.project.dm.entity.type.WeatherType;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;

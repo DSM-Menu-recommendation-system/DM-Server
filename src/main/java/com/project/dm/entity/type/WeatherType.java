@@ -1,4 +1,4 @@
-package com.project.dm.domain.menu.domain.type;
+package com.project.dm.entity.type;
 
 public enum WeatherType {
     SUNNY,

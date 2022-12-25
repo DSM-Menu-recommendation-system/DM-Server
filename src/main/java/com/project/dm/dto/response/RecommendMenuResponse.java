@@ -1,4 +1,4 @@
-package com.project.dm.domain.menu.presentation.dto.response;
+package com.project.dm.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

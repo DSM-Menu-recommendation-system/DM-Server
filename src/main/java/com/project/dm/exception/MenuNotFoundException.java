@@ -1,4 +1,4 @@
-package com.project.dm.domain.menu.exception;
+package com.project.dm.exception;
 
 import com.project.dm.global.error.exception.BusinessException;
 import com.project.dm.global.error.exception.ErrorCode;

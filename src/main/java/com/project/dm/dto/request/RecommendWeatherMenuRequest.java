@@ -1,6 +1,6 @@
-package com.project.dm.domain.menu.presentation.dto.request;
+package com.project.dm.dto.request;
 
-import com.project.dm.domain.menu.domain.type.WeatherType;
+import com.project.dm.entity.type.WeatherType;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
