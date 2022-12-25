@@ -20,16 +20,8 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
-          
-      - name: Setup MySQL
-        uses: samin/mysql-action@v1
-        with:
-          character set server: 'utf8' 
-          mysql database: ${{ secrets.MYSQL_NAME }}
-          mysql user: 'root'
-          mysql password: ${{ secrets.MYSQL_PASSWORD }}    
 
       - name: Build with Gradle
-        uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
+        uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
         with:
           arguments: build
