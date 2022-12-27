@@ -1,13 +1,13 @@
 package com.project.dm.service;
 
-import com.project.dm.dto.request.RecommendMoodMenuRequest;
-import com.project.dm.dto.request.RecommendWeatherMenuRequest;
 import com.project.dm.dto.response.RecommendMenuResponse;
+import com.project.dm.entity.type.MoodType;
+import com.project.dm.entity.type.WeatherType;
 
 public interface MenuService {
 
-    RecommendMenuResponse recommendMenu(RecommendWeatherMenuRequest request);
+    RecommendMenuResponse recommendMenu(WeatherType weatherType);
 
-    RecommendMenuResponse recommendMenu(RecommendMoodMenuRequest request);
+    RecommendMenuResponse recommendMenu(MoodType moodType);
 
 }
