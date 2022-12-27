@@ -9,11 +9,9 @@ import java.util.Optional;
 
 public interface MenuRepository extends CrudRepository<Menu, Integer> {
 
-    Optional<Menu> findById(Integer menuId);
+    Optional<Menu> findByWeatherTypeAndCheckWeatherNum(WeatherType weatherType, Integer menuId);
 
-    Optional<Menu> findByCheckWeatherNum(Integer menuId);
-
-    Optional<Menu> findByCheckMoodNum(Integer menuId);
+    Optional<Menu> findByMoodTypeAndCheckMoodNum(MoodType moodType, Integer menuId);
 
     Long countAllByWeatherType(WeatherType weatherType);
 

@@ -25,7 +25,7 @@ public class RecommendMenuServiceImpl implements MenuService {
         //Integer menuId = random.nextInt(7);
         Integer menuId = (int)(Math.random() * 7 + 1 - 1) + 1;
         System.out.println("menuId = " + menuId);
-        Menu menu = menuFacade.getMenuByWeatherNum(menuId);
+        Menu menu = menuFacade.getMenuByWeatherNum(weatherType, menuId);
 
         return new RecommendMenuResponse(menu.getFood(), menu.getMenuImageUrl());
     }
@@ -37,7 +37,7 @@ public class RecommendMenuServiceImpl implements MenuService {
         //Long menuCount = menuRepository.countAllByMoodType(moodType);
         Integer menuId = (int)(Math.random() * 7 + 1 - 1) + 1;
         System.out.println("menuId = " + menuId);
-        Menu menu = menuFacade.getMenuByMoodNum(menuId);
+        Menu menu = menuFacade.getMenuByMoodNum(moodType, menuId);
 
         return new RecommendMenuResponse(menu.getFood(), menu.getMenuImageUrl());
     }
