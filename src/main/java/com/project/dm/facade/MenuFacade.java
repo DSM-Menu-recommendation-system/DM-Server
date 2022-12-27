@@ -8,20 +8,24 @@ import com.project.dm.exception.MenuNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
+import java.util.Random;
+
 @RequiredArgsConstructor
 @Component
 public class MenuFacade {
 
     private final MenuRepository menuRepository;
 
-    public Menu getMenuByMoodNum(MoodType moodType, Integer menuId) {
-        return menuRepository.findByMoodTypeAndCheckMoodNum(moodType, menuId)
-                .orElseThrow(() -> MenuNotFoundException.EXCEPTION);
+    public Menu getMenuByMoodNum(MoodType moodType) {
+        Random rand = new Random();
+        var menuList = menuRepository.findAllByMoodType(moodType);
+        return menuList.get(rand.nextInt(menuList.size()));
     }
 
-    public Menu getMenuByWeatherNum(WeatherType weatherType, Integer menuId) {
-        return menuRepository.findByWeatherTypeAndCheckWeatherNum(weatherType, menuId)
-                .orElseThrow(() -> MenuNotFoundException.EXCEPTION);
+    public Menu getMenuByWeatherNum(WeatherType weatherType) {
+        Random rand = new Random();
+        var menuList = menuRepository.findAllByWeatherType(weatherType);
+        return menuList.get(rand.nextInt(menuList.size()));
     }
 
 }

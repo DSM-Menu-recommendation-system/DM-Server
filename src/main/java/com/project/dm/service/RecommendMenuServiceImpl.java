@@ -19,9 +19,9 @@ public class RecommendMenuServiceImpl implements MenuService {
     @Transactional(readOnly = true)
     public RecommendMenuResponse recommendMenu(WeatherType weatherType) {
 
-        Integer menuId = (int)(Math.random() * 5 + 1 - 1) + 1;
-        System.out.println("menuId = " + menuId);
-        Menu menu = menuFacade.getMenuByWeatherNum(weatherType, menuId);
+//        System.out.println("menuId = " + menuId);
+        Menu menu = menuFacade.getMenuByWeatherNum(weatherType);
+
 
         return new RecommendMenuResponse(menu.getFood(), menu.getMenuImageUrl());
     }
@@ -30,9 +30,8 @@ public class RecommendMenuServiceImpl implements MenuService {
     @Transactional(readOnly = true)
     public RecommendMenuResponse recommendMenu(MoodType moodType) {
 
-        Integer menuId = (int)(Math.random() * 5 + 1 - 1) + 1;
-        System.out.println("menuId = " + menuId);
-        Menu menu = menuFacade.getMenuByMoodNum(moodType, menuId);
+//        System.out.println("menuId = " + menuId);
+        Menu menu = menuFacade.getMenuByMoodNum(moodType);
 
         return new RecommendMenuResponse(menu.getFood(), menu.getMenuImageUrl());
     }
