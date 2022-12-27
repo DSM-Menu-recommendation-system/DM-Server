@@ -20,7 +20,6 @@ public class RecommendMenuServiceImpl implements MenuService {
 
     private final MenuFacade menuFacade;
     private final MenuRepository menuRepository;
-    Random random = new Random();
 
     @Override
     @Transactional(readOnly = true)
@@ -28,8 +27,9 @@ public class RecommendMenuServiceImpl implements MenuService {
 
         WeatherType weatherType = request.getWeatherType();
 
-        Long menuCount = menuRepository.countAllByWeatherType(weatherType);
-        Integer menuId = random.nextInt(7);
+        //Long menuCount = menuRepository.countAllByWeatherType(weatherType);
+        //Integer menuId = random.nextInt(7);
+        Integer menuId = (int)(Math.random() * 7 + 1 - 1) + 1;
         System.out.println("menuId = " + menuId);
         Menu menu = menuFacade.getMenuByWeatherNum(menuId);
 
@@ -42,8 +42,8 @@ public class RecommendMenuServiceImpl implements MenuService {
 
         MoodType moodType = request.getMoodType();
 
-        Long menuCount = menuRepository.countAllByMoodType(moodType);
-        Integer menuId = random.nextInt(7);
+        //Long menuCount = menuRepository.countAllByMoodType(moodType);
+        Integer menuId = (int)(Math.random() * 7 + 1 - 1) + 1;
         System.out.println("menuId = " + menuId);
         Menu menu = menuFacade.getMenuByMoodNum(menuId);
 
