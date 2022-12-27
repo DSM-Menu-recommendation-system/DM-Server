@@ -4,7 +4,6 @@ import com.project.dm.entity.Menu;
 import com.project.dm.entity.repository.MenuRepository;
 import com.project.dm.entity.type.MoodType;
 import com.project.dm.entity.type.WeatherType;
-import com.project.dm.exception.MenuNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

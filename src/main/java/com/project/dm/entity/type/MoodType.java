@@ -5,5 +5,6 @@ public enum MoodType {
     SAD,
     ANGRY,
     DEPRESSED,
-    PAIN
+    PAIN,
+    X
 }

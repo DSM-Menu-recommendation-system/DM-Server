@@ -5,5 +5,6 @@ public enum WeatherType {
     RAINING,
     COLD,
     HOT,
-    SNOW
+    SNOW,
+    X
 }
