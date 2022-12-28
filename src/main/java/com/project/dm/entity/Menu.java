@@ -32,12 +32,6 @@ public class Menu {
     @Column(nullable = false)
     private String menuImageUrl;
 
-    @Column(columnDefinition = "TINYINT", nullable = false)
-    private Integer checkMoodNum;
-
-    @Column(columnDefinition = "TINYINT", nullable = false)
-    private Integer checkWeatherNum;
-
     @Builder
     public Menu(String food, MoodType moodType, WeatherType weatherType) {
         this.food = food;
